@@ -25,3 +25,5 @@ urlpatterns = [
     path('', base_views.index, name='index'),
 
 ]
+
+

@@ -8,3 +8,4 @@ class QuestionForm(forms.ModelForm):
         labels = {
             'content': '질문내용'
         }
+
