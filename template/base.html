@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>SK AI 7</title>
+</head>
+<body>
+<!-- 로그인 및 네비 -->
+{% include "navbar.html" %}
+
+<!-- 컨텐츠 -->
+{% block content %}
+{% endblock %}
+
+<script src="{% static 'jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'bootstrap.min.js' %}"></script>
+{% block script %}
+{% endblock %}
+</body>
+</html>
+
+
+
+
+
