@@ -6,3 +6,9 @@ class Question(models.Model):
 
     def __str__(self):
         return self.content
+
+class SignUp(models.Model):
+    content = models.TextField()
+
+    def __str__(self):
+        return self.content

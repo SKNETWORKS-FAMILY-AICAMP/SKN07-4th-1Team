@@ -7,5 +7,4 @@ urlpatterns = [
     path('', base_views.index, name='index'),
 
     path('question/', question_views.question_view, name='question'),
-
 ]
