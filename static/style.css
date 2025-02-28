@@ -62,7 +62,7 @@
 
 .main_chat >.container{
     max-width: none;
-    min-width: 800px;
+    /* min-width: 800px; */
     width: 100%;
     height: 100%;
     margin-top: 20px;
@@ -100,6 +100,7 @@
     min-height: 55px;
     height: fit-content;
     padding: 7.5px 20px;
+    margin-left: 60px;
     outline: none;
     background-color: rgb(245, 245, 245);
     border: 0;
@@ -151,7 +152,7 @@
     margin-left: 20px;
 }
 
-.bubble img {
+.bubble img { 
     max-width: 50%;
     height: auto;
 }
@@ -196,15 +197,20 @@ html,body{
     width: 100%; height: calc(100% - 40px);
     display: flex;
 }
-#side_box.on{
-    display: block;
+
+#side_box{
     width: 260px; height: 100%;
+    min-width: 220px;
     padding: 20px;
     background-color: #ececec;
+}
+#side_box.on{
+    display: block;
 }
 #side_box.off{
     display: none;
 }
+
 #side_box>h4{
     padding: 15px 20px;
     font-size: 1rem;
@@ -222,14 +228,7 @@ html,body{
     border-radius: 10px;
     cursor: pointer;
 }
-#side_box>p> button{
-    width: 100px;
-    margin-top: 20px;
-    border: 0;
-    border-radius: 20px;
-}
-#side_box>p a{
-    color: white;
+#side_box>p>strong{
     text-align: center;
     display: block;
 }
@@ -242,10 +241,9 @@ html,body{
     position: fixed;
     bottom: 10px;
     left: 10px;
-    padding: 10px;
     background-color: #b6b6b6;
-    width: 200px; height: 50px;
-    text-align: center;
+    width: 200px; height: 40px;
+    text-align: center; line-height: 40px;
     border-radius: 10px;
     color: #ffffff;
     font-size: 1.2rem;
@@ -282,4 +280,32 @@ a.nocolor{
     width: 100px;
     height: 30px;
     font-size: 0.95rem;
+}
+
+
+/* 로딩바 */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    display: none; /* 초기에는 숨김 */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loadingtext{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 20px;
 }
