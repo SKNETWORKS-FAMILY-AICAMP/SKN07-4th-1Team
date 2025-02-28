@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- 반응형 컨테이너 -->
+<div class="d-flex flex-grow-1 vh-100 w-100 align-items-center justify-content-center">
+    <div class="flex-grow-1 flex-fill">
+        <!-- 채팅창 -->
+        <div class="box-wrap m-auto">
+            <div class="container">
+                <h2>🦝 어떤 숙소를 찾고 있나요?</h2>
+            </div>
+            <div class="chat-input container">
+                <input type="text" placeholder="원하는 숙소를 검색해보세요!">
+                <button class="btn btn-primary" type="button" id="btn_search">찾기</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
