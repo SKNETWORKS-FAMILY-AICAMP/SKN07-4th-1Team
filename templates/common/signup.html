@@ -13,23 +13,25 @@
         <div class="signup-box">
             <h2>📂 숙박구리 🦝</h2>
             <form action="#" method="post">
+                {% csrf_token %}
+                {% include "form_errors.html" %}
                 <div class="input-group">
                     <label for="username"><span class="icon">👤</span></label>
-                    <input type="text" id="username" name="username" placeholder="사용자 생성 아이디 입력" required>   
+                    <input type="text" id="username" name="username" placeholder="아이디 입력" required value="{{ form.username.value|default_if_none:'' }}">   
                 </div>
                 <div class="input-group">
-                    <label for="password"><span class="icon">🔒</span></label>
-                    <input type="password" id="password" name="password" placeholder="비밀번호 입력" required>
+                    <label for="password1"><span class="icon">🔒</span></label>
+                    <input type="password" id="password1" name="password1" placeholder="비밀번호 입력" required value="{{ form.password1.value|default_if_none:'' }}">
                 </div>
                 <div class="input-group">
-                    <label for="password_check"><span class="icon">🔒</span></label>
-                    <input type="password" id="password_check" name="password_check" placeholder="비밀번호 확인" required>
+                    <label for="password2"><span class="icon">🔒</span></label>
+                    <input type="password" id="password2" name="password2" placeholder="비밀번호 확인" required value="{{ form.password2.value|default_if_none:'' }}">
                 </div>
                 <div class="input-group">
                     <label for="email"><span class="icon">✉️</span></label>
-                    <input type="email" id="email" name="email" placeholder="이메일 입력" required>
+                    <input type="email" id="email" name="email" placeholder="이메일 입력" required value="{{ form.email.value|default_if_none:'' }}">
                 </div>
-                <button type="submit">Sign in</button>
+                <button type="submit">가입하기</button>
             </form>
         </div>
     </div>

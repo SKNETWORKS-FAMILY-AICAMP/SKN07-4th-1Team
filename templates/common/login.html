@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📂숙박구리🦝</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-box">
+            <h2>📂 숙박구리 🦝</h2>
+            <form method="post" class="post-form" action="{% url 'common:login' %}">
+                {% csrf_token %}
+                {% include 'form_errors.html' %}
+                <div class="input-group">
+                    <label for="username"><span class="icon">👤</span></label>
+                    <input type="text" id="username" name="username" placeholder="아이디 입력" required value="{{ form.username.value|default_if_none:'' }}">
+                </div>
+                <div class="input-group">
+                    <label for="password"><span class="icon">🔒</span></label>
+                    <input type="password" id="password" name="password" placeholder="비밀번호 입력" required value="{{ form.password.value|default_if_none:'' }}">
+                </div>
+                <button type="submit">로그인</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
