@@ -1,0 +1,32 @@
+# OpenAI API와 LangChain 관련 패키지
+openai==0.28.1
+langchain==0.1.16
+langchain-community==0.0.38
+langchain-core==0.1.53
+langchain-text-splitters==0.0.2
+
+# 벡터 데이터베이스 (Chroma)
+chromadb==0.3.26
+
+# 데이터 처리 및 로딩
+pandas==2.0.3
+tqdm==4.66.1
+beautifulsoup4==4.12.3
+lxml==4.9.3
+
+# Embedding 및 벡터 유사도 처리
+faiss-cpu==1.9.0
+
+# HTTP 요청 및 API 통신
+requests==2.32.3
+
+# 필수 유틸리티
+python-dotenv==1.0.0
+numpy==1.25.2
+
+# JSON 데이터 처리
+orjson==3.10.15
+
+# 기타 의존성
+pydantic==1.10.9
+typing-extensions==4.12.2

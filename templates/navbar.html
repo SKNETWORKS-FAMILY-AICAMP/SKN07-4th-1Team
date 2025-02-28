@@ -1,13 +1,13 @@
 <div id="top_box">
     <div id="logo" class="in_top">
-        <h3><a class="nocolor" href="{% url 'project4:index' %}">숙박구리</a></h3>
+        <h5><a class="nocolor" href="{% url 'project4:index' %}">📂숙박구리🦝</a></h5>
     </div>
     <div id="use_info" class="in_top">
         {% if user.is_authenticated %}
-            <p><a class="nocolor" href="{% url 'common:logout' %}">로그아웃</a></p>
+            <p><a class="btn btn-outline-primary btn-nav" href="{% url 'common:logout' %}">로그아웃</a></p>
         {%  else %}
-            <p><a class="nocolor" href="{% url 'common:login' %}">로그인</a></p>
-            <p><a class="nocolor" href="{% url 'common:signup' %}">회원가입</a></p>
+            <p><a class="btn btn-outline-primary btn-nav" href="{% url 'common:login' %}">로그인</a></p>
+            <p><a class="btn btn-outline-primary btn-nav" href="{% url 'common:signup' %}">회원가입</a></p>
         {% endif %}
     </div>
 </div>
