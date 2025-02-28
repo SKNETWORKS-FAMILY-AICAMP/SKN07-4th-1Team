@@ -15,22 +15,27 @@
     {% include "navbar.html" %}
     <div id="main_box">
         <div id="side_box" class="on">
+            {% if user.is_authenticated %}
             <h4 class="select_side"><a class="nocolor"  href="#">선택 대화방</a></h4>
             <h4><a class="nocolor"  href="#">대화방 리스트1</a></h4>
             <h4><a class="nocolor"  href="#">대화방 리스트2</a></h4>
             <h4><a class="nocolor"  href="#">대화방 리스트3</a></h4>
+            {% else %}
             <p>
-                대화내용 기억을 원하신다면
-                <strong><a class="nocolor"  href="#"> - Login - </a></strong>
+                🦝 대화 저장을 원하시면 로그인해 보세요.
+                <button class="btn btn-primary"><a href="{% url 'common:login' %}">Login</a></button>
             </p>
-            
+            {% endif %}
         </div>
         <div id="cont_box">
             {% block content %}
             {% endblock %}
         </div>
+        <span id="side_onoff" class="open">
+            <strong>닫기</strong>
+        </span>
     </div>
-    <span id="side_onoff" class="open">닫기</span>
+    
     <!-- 컨텐츠 -->
     
 
