@@ -23,11 +23,11 @@
     margin: 25px auto 0 auto;
 }
 
-.chat-input > input, .bubble{
+.chat-input > textarea, .bubble{
     width: 100%;
     min-height: 55px;
     height: fit-content;
-    padding: 7.5px 20px;
+    padding: 15px 20px;
     outline: none;
     background-color: rgb(245, 245, 245);
     border: 0;
@@ -35,8 +35,13 @@
     box-shadow: 0 10px 10px -11px #cecece;
 }
 
-.chat-input > input::placeholder{
+.chat-input > textarea::placeholder{
     color: rgb(121, 121, 121);
+    align-items: center;
+}
+
+.chat-input > textarea::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
 }
 
 .chat-input > button{
