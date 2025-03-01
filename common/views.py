@@ -10,7 +10,7 @@ def signup(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            emai = form.cleaned_data.get('email')
+            email = form.cleaned_data.get('email')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, email=email, password=raw_password)
             login(request, user)

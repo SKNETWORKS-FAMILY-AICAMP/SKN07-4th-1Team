@@ -22,9 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('project4/', include('project4.urls')),
     path('common/', include('common.urls')),
-
     path('', base_views.index, name='index'),
-
 ]
 
 
