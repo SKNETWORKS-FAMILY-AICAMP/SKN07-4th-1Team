@@ -9,8 +9,11 @@
                 <h2>🦝 어떤 숙소를 찾고 있나요?</h2>
             </div>
             <div class="chat-input container">
-                <input type="text" placeholder="원하는 숙소를 검색해보세요!">
-                <button class="btn btn-primary" type="button" id="btn_search">찾기</button>
+                <form method="post" action="{% url 'question' %}">
+                    {% csrf_token %}
+                    <textarea class="form-control" name="question" id="question" rows="1" placeholder="원하는 숙소를 검색해 보세요!">{{ form.content.value|default_if_none:'' }}</textarea>
+                    <button class="btn btn-primary" type="button" id="btn_search">찾기</button>
+                </form>
             </div>
         </div>
         

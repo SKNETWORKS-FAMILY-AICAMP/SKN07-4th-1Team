@@ -72,8 +72,9 @@
                     </div>
                 </div>
             </div>
-            <div class="chat_input ">
-                <input type="text" placeholder="원하는 숙소를 검색해보세요!">
+            <div class="chat-input container">
+                <textarea class="form-control" name="question" id="question" rows="1" placeholder="원하는 숙소를 검색해 보세요!"></textarea>
+                <!-- {{ form.content.value|default_if_none:'' }} -->
                 <button class="btn btn-primary" type="button" id="btn_search">찾기</button>
             </div>
         </div>
