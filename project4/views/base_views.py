@@ -12,5 +12,5 @@ from django.db.models import Q
 # 리스트
 def index(request):
    
-    return render(request, 'project4/main.html')
+    return render(request, 'project4/main_chat.html')
 
