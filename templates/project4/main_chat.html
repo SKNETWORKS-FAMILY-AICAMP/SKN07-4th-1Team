@@ -6,6 +6,9 @@
         <!-- 채팅창 -->
         <div class="box-wrap">
             <div id="chat-box" class="container chat-box">
+                <div class="start_chat">
+                    <h2>🦝 어떤 숙소를 찾고 있나요?</h2>
+                </div>
                 <!-- <div class="bubble-q">
                     <div class="bubble">
                         질문이욤 질문이욤 질문이욤 질문이욤                     
@@ -58,6 +61,7 @@
                 },
                 success: function(response) {
                     $("#loading-overlay").hide();
+                    $(".start_chat").css('display', 'none');
                     let markdownAnswer = response.response;
                     
                     // 마크다운을 HTML로 변환
