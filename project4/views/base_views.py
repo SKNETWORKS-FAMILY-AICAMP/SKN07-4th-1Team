@@ -84,7 +84,7 @@ def get_answer_from_db(user_query, chat_history):
     참고할 정보:\n{context}\n\n이 정보를 기반으로 정확하게 답변해 주세요.  \
     {user_query}의 요구사항과 {context}\n\n의 정보가 일치하지 않으면 제외하고 답변해 주세요. \
     {context}에 이미지 링크가 있으면, 첫 번째 이미지만 크기를 50% 비율로 변경해 출력해주세요. \
-        답변할 정보 외에 불필요한 설명은 제외해주세요."))
+        이미지는 설명 없이 이미지만 출력해주세요."))
 
     response = llm(messages)
     return response.content
