@@ -175,7 +175,7 @@ html,body{
 }
 #logo{
     display: flex;
-    width: 187px; height: 136%;
+    width: 187px; height: 150%;
     justify-content: center;
     align-items: center;
 }
