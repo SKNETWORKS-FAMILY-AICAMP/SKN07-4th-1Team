@@ -7,7 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <title>📂숙박구리🦝</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- marked.js 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- DOMPurify 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+
+    <title>SK AI 7</title>
 </head>
 <body>
     <div id="out_box">
@@ -38,16 +44,17 @@
     <script src="{% static 'bootstrap.min.js' %}"></script>
     {% block script %}
     {% endblock %}
+    
+    <script>
+    $('#side_onoff').on('click', function() {
+        $(this).toggleClass('open close').text($(this).hasClass('open') ? '닫기' : '열기'); 
+        $('#side_box').toggleClass('on off'); 
+    });
+    </script>
+    
 </div>
 </body>
 </html>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$('#side_onoff').on('click', function() {
-    $(this).toggleClass('open close').text($(this).hasClass('open') ? '닫기' : '열기'); 
-    $('#side_box').toggleClass('on off'); 
-});
-</script>
 
 
 
