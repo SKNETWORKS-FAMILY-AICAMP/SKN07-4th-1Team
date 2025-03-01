@@ -98,6 +98,7 @@
 .chat_input input{
     width: 100%;
     min-height: 55px;
+    margin-left: 60px;
     height: fit-content;
     padding: 7.5px 20px;
     outline: none;
