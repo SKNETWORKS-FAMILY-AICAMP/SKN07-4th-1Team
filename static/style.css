@@ -1,0 +1,93 @@
+/* main */
+
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+.box-wrap{
+    width: auto;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.chat-input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+    margin: 25px auto 0 auto;
+}
+
+.chat-input > input, .bubble{
+    width: 100%;
+    min-height: 55px;
+    height: fit-content;
+    padding: 7.5px 20px;
+    outline: none;
+    background-color: rgb(245, 245, 245);
+    border: 0;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px -11px #cecece;
+}
+
+.chat-input > input::placeholder{
+    color: rgb(121, 121, 121);
+}
+
+.chat-input > button{
+    width: 80px;
+    height: 55px;
+    border: 0;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right:10px;
+    align-items: bottom;
+    box-shadow: 0 10px 10px -9px #cecece;
+}
+
+
+/* main_chat */
+
+.main_chat >.container{
+    height: 100vh !important;
+}
+
+.main_chat .box-wrap{
+    height: 100vh !important;
+    justify-content: space-between;
+}
+
+.chat-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+}
+
+.bubble-q, .bubble-a{
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+}
+
+.bubble-q .bubble{
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(201, 223, 255);
+    float: right;
+    position: relative;
+}
+
+.bubble-a .bubble{
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(222, 214, 250);
+}
