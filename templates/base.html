@@ -10,19 +10,44 @@
     <title>SK AI 7</title>
 </head>
 <body>
-<!-- 로그인 및 네비 -->
-{% include "navbar.html" %}
+    <div id="out_box">
+    <!-- 네비 -->
+    {% include "navbar.html" %}
+    <div id="main_box">
+        <div id="side_box" class="on">
+            <h4 class="select_side">선택 대화방</h4>
+            <h4>대화방 리스트1</h4>
+            <h4>대화방 리스트2</h4>
+            <h4>대화방 리스트3</h4>
+            <p>
+                대화내용 기억을 원하신다면
+                <strong> - Login - </strong>
+            </p>
+            
+        </div>
+        <div id="cont_box">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <span id="side_onoff" class="open">닫기</span>
+    <!-- 컨텐츠 -->
+    
 
-<!-- 컨텐츠 -->
-{% block content %}
-{% endblock %}
-
-<script src="{% static 'jquery-3.4.1.min.js' %}"></script>
-<script src="{% static 'bootstrap.min.js' %}"></script>
-{% block script %}
-{% endblock %}
+    <script src="{% static 'jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    {% block script %}
+    {% endblock %}
+</div>
 </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$('#side_onoff').on('click', function() {
+    $(this).toggleClass('open close').text($(this).hasClass('open') ? '닫기' : '열기'); 
+    $('#side_box').toggleClass('on off'); 
+});
+</script>
 
 
 
