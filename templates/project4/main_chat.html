@@ -5,8 +5,8 @@
     <div class="container">
         <!-- 채팅창 -->
         <div class="box-wrap">
-            <div class="container chat-box">
-                <div class="bubble-q">
+            <div id="chat-box" class="container chat-box">
+                <!-- <div class="bubble-q">
                     <div class="bubble">
                         질문이욤 질문이욤 질문이욤 질문이욤                     
                     </div>
@@ -15,70 +15,67 @@
                     <div class="bubble">
                         대답이용 대답이용대답이용대답이용
                     </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
-                <div class="bubble-a">
-                    <div class="bubble">
-                        대답이용 대답이용대답이용대답이용
-                    </div>
-                </div>
+                </div> -->
             </div>
-            <div class="chat-input container">
-                <textarea class="form-control" name="question" id="question" rows="1" placeholder="원하는 숙소를 검색해 보세요!"></textarea>
-                <!-- {{ form.content.value|default_if_none:'' }} -->
+            <div class="chat_input ">
+                <input id="user_input" type="text" placeholder="원하는 숙소를 검색해보세요!">
                 <button class="btn btn-primary" type="button" id="btn_search">찾기</button>
             </div>
         </div>
         
     </div>
 </div>
+{% endblock %}
+
+
+{% block script %}
+<script>
+    $(document).ready(function(){
+        $("#btn_search").click(function(){
+            let user_query = $("#user_input").val();
+    
+            if (user_query === "") {
+                alert("질문을 입력하세요!");
+                return;
+            }
+    
+            // 사용자 질문 추가
+            $("#chat-box").append(`<div class="bubble-q"><div class="bubble">${user_query}</div></div>`);
+            $("#user_input").val(""); // 입력창 비우기
+    
+            // 서버에 Ajax 요청
+            $.ajax({
+                url: "{% url 'project4:chat_response' %}",
+                type: "POST",
+                data: {
+                    query: user_query,
+                    csrfmiddlewaretoken: "{{ csrf_token }}"
+                },
+                success: function(response) {
+                    let markdownAnswer = response.response;
+                    
+                    // 마크다운을 HTML로 변환
+                    let rawHtml = marked.parse(markdownAnswer);
+                    
+                    // 변환된 HTML을 정화하여 안전하게 만듦
+                    let cleanHtml = DOMPurify.sanitize(rawHtml);
+                    
+                    // 정화된 HTML을 채팅 박스에 추가
+                    $("#chat-box").append(`<div class="bubble-a"><div class="bubble">${cleanHtml}</div></div>`);
+                    $("#chat-box").scrollTop($("#chat-box")[0].scrollHeight); // 스크롤 아래로 이동
+                },
+                error: function(xhr) {
+                    alert("오류 발생: " + xhr.responseJSON.error);
+                }
+            });
+        });
+    
+        // Enter 키 입력 시 검색 버튼 클릭
+        $("#user_input").keypress(function(event) {
+            if (event.which === 13) {
+                $("#btn_search").click();
+            }
+        });
+    });
+</script>
 {% endblock %}

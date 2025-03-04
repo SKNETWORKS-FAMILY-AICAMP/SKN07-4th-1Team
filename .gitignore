@@ -4,6 +4,7 @@
 # settings.py
 config/settings.py
 __init__.cpython-39.pyc
+data/
 
 ### Django ###
 *.log
