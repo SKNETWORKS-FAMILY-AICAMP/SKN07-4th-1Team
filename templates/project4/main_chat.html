@@ -22,7 +22,9 @@
                 <button class="btn btn-primary" type="button" id="btn_search">찾기</button>
             </div>
         </div>
-        
+        <div id="loading-overlay">
+            <strong id="loadingtext">🦝찾아보는중🦝</strong>
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -50,8 +52,12 @@
                 data: {
                     query: user_query,
                     csrfmiddlewaretoken: "{{ csrf_token }}"
+                },beforeSend: function() {
+                    // AJAX 요청 전 로딩 오버레이 표시
+                    $("#loading-overlay").show();
                 },
                 success: function(response) {
+                    $("#loading-overlay").hide();
                     let markdownAnswer = response.response;
                     
                     // 마크다운을 HTML로 변환
@@ -63,6 +69,7 @@
                     // 정화된 HTML을 채팅 박스에 추가
                     $("#chat-box").append(`<div class="bubble-a"><div class="bubble">${cleanHtml}</div></div>`);
                     $("#chat-box").scrollTop($("#chat-box")[0].scrollHeight); // 스크롤 아래로 이동
+
                 },
                 error: function(xhr) {
                     alert("오류 발생: " + xhr.responseJSON.error);
