@@ -1,6 +1,6 @@
 # SKN07-4th-1Team
 
-# 3차 프로젝트
+# 4차 프로젝트
 
 ## 1. 팀 소개
 -
@@ -14,16 +14,15 @@
   </tr>
 
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/c53b820e-548d-48ec-bcaf-c35a0194ebf5" width="175" height="175"></td>
-    <td><img src= "https://github.com/user-attachments/assets/0d1d8199-6d3b-4a1f-bdcc-2cd503ae7792" width="175" height="175"></td>
-    <td><img src="https://github.com/user-attachments/assets/da1ae31d-546f-4717-9960-71434d07b5de" width="175" height="175"></td>
+    <td><img src="" width="175" height="175"></td>
+    <td><img src="" width="175" height="175"></td>
+    <td><img src="" width="175" height="175"></td>
   </tr>
   <tr></tr>
 
     <th>1</th>
     <th>2</th>
     <th>3</th>
-    <th>4</th>
   </tr>
   </table>
 
