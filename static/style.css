@@ -127,12 +127,12 @@ html,body{
 
 
 #main_box{
-    width: 100%; height: 100%;
+    width: 100%; height: calc(100% - 40px);
     display: flex;
 }
 #side_box.on{
     display: block;
-    width: 260px; height: calc(100% - 40px);
+    width: 260px; height: 100%;
     padding: 20px;
     background-color: #ececec;
 }
@@ -192,5 +192,9 @@ html,body{
 }
 
 #cont_box{
-    width: 100%;
+    width: 100%; 
+    height:calc(100% - 40px);
+}
+#cont_box div{
+    height: 100%;
 }
