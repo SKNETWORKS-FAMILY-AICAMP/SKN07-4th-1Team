@@ -1,13 +1,13 @@
 <div id="top_box">
     <div id="logo" class="in_top">
-        <h3>숙박구리</h3>
+        <h3 ><a class="nocolor" href="{% url 'project4:index' %}">숙박구리</a></h3>
     </div>
     <div id="use_info" class="in_top">
         {% if user.is_authenticated %}
-            <p href="">로그아웃</p>
+            <p><a class="nocolor" href="#">로그아웃</a></p>
         {%  else %}
-            <p href="">로그인</p>
-            <p href="">회원가입</p>
+            <p><a class="nocolor" href="#">로그인</a></p>
+            <p><a class="nocolor" href="#">회원가입</a></p>
         {% endif %}
     </div>
 </div>
