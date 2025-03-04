@@ -80,7 +80,7 @@
     height: calc(100% - 55px);
     display: flex;
     flex-direction: column;
-    padding: 0 30px 0 30px;
+    padding: 25px 30px 0 30px;
     overflow:auto;
 }
 .chat-box::-webkit-scrollbar {
@@ -321,4 +321,10 @@ a.nocolor{
     text-align: center;
     line-height: 50px;
     border-radius: 20px;
+}
+
+.start_chat{
+    position: absolute;
+    top:40%;
+    left: 40%
 }
