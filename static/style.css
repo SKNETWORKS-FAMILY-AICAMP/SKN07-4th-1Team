@@ -19,9 +19,11 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: top;
     justify-content: center;
-    margin: 25px auto 10px auto;
+    margin: 25px auto 0 auto;
 }
+
 
 .chat-input > textarea, .bubble{
     width: 100%;
@@ -138,6 +140,10 @@
     background-color: rgb(222, 214, 250);
 }
 
+.bubble img {
+    max-width: 50%;
+    height: auto;
+}
 
 /* nav */
 html,body{
