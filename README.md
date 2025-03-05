@@ -87,7 +87,14 @@ GPT도 정확히 알 수 없는 부대시설, 객실 어메니티 정보를 알�
 ---
 
 ## 4. 기술스택
-
+ - ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
+ - ![LangChain](https://img.shields.io/badge/LangChain-0.1.16-orange)
+ - ![Chroma](https://img.shields.io/badge/Chroma-Vector%20DB-0091FF?style=flat&logo=pinecone&logoColor=white)
+ - ![OpenAI GPT-3.5 turbo](https://img.shields.io/badge/OpenAI-GPT--3.5--turbo-blueviolet?logo=openai&logoColor=white)
+ - ![OpenAI GPT-4](https://img.shields.io/badge/OpenAI-GPT--4-blueviolet?logo=openai&logoColor=white)
+ - ![Streamlit](https://img.shields.io/badge/Streamlit-1.39.0-red?logo=streamlit&logoColor=white)
+ - ![Django](https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white)
+ - ![MySQL](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariaDB&logoColor=white)
 ---
 
 ## 한 줄 회고
