@@ -65,4 +65,17 @@ GPT도 정확히 알 수 없는 부대시설, 객실 어메니티 정보를 알�
 ---
 
 ### 요구사항정의서
+![Image](https://github.com/user-attachments/assets/216799a4-d11b-4423-97ce-268e063ff6a7)
 
+### 화면설계서
+- 메인화면
+  ![Image](https://github.com/user-attachments/assets/c0c793d6-725e-4b08-8dea-107e3f90c53f)
+
+- 메인화면 - 로그인 상태
+  ![Image](https://github.com/user-attachments/assets/d6df2d6c-f11c-47c8-8eb7-67ded7fdab22)
+
+- 로그인
+  ![Image](https://github.com/user-attachments/assets/176829e8-ea6a-4aef-9ce6-a3c3ffbd876b)
+
+- 회원가입
+  ![Image](https://github.com/user-attachments/assets/972908ae-ec3f-4beb-8927-c82079aeefe7)
