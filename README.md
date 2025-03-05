@@ -14,15 +14,15 @@
   </tr>
 
   <tr>
-    <td><img src="" width="175" height="175"></td>
-    <td><img src="" width="175" height="175"></td>
-    <td><img src="" width="175" height="175"></td>
+    <td><img src="https://github.com/user-attachments/assets/c53b820e-548d-48ec-bcaf-c35a0194ebf5" width="175" height="175"></td>
+    <td><img src= "https://github.com/user-attachments/assets/0d1d8199-6d3b-4a1f-bdcc-2cd503ae7792" width="175" height="175"></td>
+    <td><img src="https://github.com/user-attachments/assets/da1ae31d-546f-4717-9960-71434d07b5de" width="175" height="175"></td>
   </tr>
-  <tr></tr>
+  <tr>
 
-    <th>1</th>
-    <th>2</th>
-    <th>3</th>
+    <th>요구사항정의서 작성, Django 웹앱 개발</th>
+    <th>화면설계서 작성, Django 웹앱 개발</th>
+    <th>개발 환경 세팅, Django 웹앱 개발</th>
   </tr>
   </table>
 
