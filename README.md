@@ -83,6 +83,18 @@ GPT도 정확히 알 수 없는 부대시설, 객실 어메니티 정보를 알�
   ![Image](https://github.com/user-attachments/assets/176829e8-ea6a-4aef-9ce6-a3c3ffbd876b)
 
 ### 3.3 웹 애플리케이션
+- 메인화면 - 비회원, 회원 로그아웃 상태
+  ![Image](img/image1.png)
+
+- 메인화면 - 회원 로그인 상태
+  ![Image](img/image2.png)
+
+- 로그인
+  ![Image](img/image3.png)
+
+- 회원가입
+  ![Image](img/image4.png)
+
 
 ---
 
