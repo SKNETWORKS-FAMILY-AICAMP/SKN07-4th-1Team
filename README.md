@@ -83,6 +83,17 @@ GPT도 정확히 알 수 없는 부대시설, 객실 어메니티 정보를 알�
   ![Image](https://github.com/user-attachments/assets/176829e8-ea6a-4aef-9ce6-a3c3ffbd876b)
 
 ### 3.3 웹 애플리케이션
+- 메인화면 - 비회원, 회원 로그아웃 상태
+  ![Image](img/image1.png)
+
+- 메인화면 - 회원 로그인 상태
+  ![Image](img/image2.png)
+
+- 로그인
+  ![Image](img/image3.png)
+  
+- 회원가입
+  ![Image](img/image4.png)
 
 ---
 
@@ -100,5 +111,5 @@ GPT도 정확히 알 수 없는 부대시설, 객실 어메니티 정보를 알�
 ## 한 줄 회고
 - 김나예 :
 - 김서진 :
-- 유수현 : 
+- 유수현 : 처음사용하는 django와 DB용 서버를 따로 구축하게되어 어려움이 있었지만 화면이 만들어지는것을 볼때마다 재미있고 뿌듯한 시간이었습니다.
 
